@@ -8,7 +8,7 @@ Athena is a powerful AI assistant application built with PyQt6 and integrated wi
 - Document upload and processing (PDF, DOCX)
 - Multiple chat sessions management
 - Model selection for different conversations
-- Image pasting and display in chat
+- Image pasting and display in chat (working on adding image summarization - will require vision enabled model)
 - Chat export functionality
 - Customizable settings
 
