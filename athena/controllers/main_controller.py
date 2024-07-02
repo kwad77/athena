@@ -15,18 +15,9 @@ class MainController:
         self.logger = logging.getLogger(__name__)
         self.logger.info("Initializing MainController")
         
-        self.settings_manager = SettingsManager(DEFAULT_WORKSPACE)
+        settings_file = os.path.join(os.path.dirname(__file__), '..', 'settings.json')
+        self.settings_manager = SettingsManager(settings_file)
         self.settings = self.settings_manager.load_settings()
-        if not self.settings:
-            self.settings = {
-                "ollama_url": OLLAMA_BASE_URL,
-                "working_directory": DEFAULT_WORKSPACE,
-                "theme": "light_blue.xml"
-            }
-            self.settings_manager.save_settings(self.settings)
-        
-        # Ensure working directory exists
-        os.makedirs(self.settings["working_directory"], exist_ok=True)
         
         self.main_window = None
         self.llm_service = LLMService(self.settings["ollama_url"])
