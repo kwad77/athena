@@ -1,0 +1,951 @@
+2024-06-30 08:54:45,764 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 08:54:45,764 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 08:54:45,778 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 49, in <module>
+    main()
+  File "D:\athena\main.py", line 43, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 18, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 23, in init_main_window
+    self.main_window = MainWindow()
+                       ^^^^^^^^^^^^
+  File "D:\athena\athena\views\main_window.py", line 10, in __init__
+    self.chat_window = ChatWindow(self)
+                       ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\chat_window.py", line 22, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\chat_window.py", line 72, in init_ui
+    splitter = QSplitter(Qt.Horizontal)
+                         ^^^^^^^^^^^^^
+AttributeError: type object 'Qt' has no attribute 'Horizontal'
+2024-06-30 09:00:16,362 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:00:16,362 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:00:16,375 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:00:16,375 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 49, in <module>
+    main()
+  File "D:\athena\main.py", line 43, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 19, in __init__
+    self.connect_signals()
+  File "D:\athena\athena\controllers\main_controller.py", line 28, in connect_signals
+    self.main_window.chat_window.export_requested.connect(self.handle_export_request)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'export_requested'. Did you mean: 'new_chat_requested'?
+2024-06-30 09:03:31,501 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:03:31,501 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:03:31,513 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:03:31,513 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:03:31,557 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:03:31,559 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:03:33,648 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:03:33,648 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:03:33,649 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 49, in <module>
+    main()
+  File "D:\athena\main.py", line 46, in main
+    sys.exit(app.exec_())
+             ^^^^^^^^^
+AttributeError: 'QApplication' object has no attribute 'exec_'. Did you mean: 'exec'?
+2024-06-30 09:05:07,631 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:05:07,631 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:05:07,643 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:05:07,643 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:05:07,688 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:05:07,689 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:05:09,737 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:05:09,738 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:05:14,308 - athena.controllers.main_controller - INFO - Handling new chat request
+2024-06-30 09:05:30,225 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 09:05:35,273 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:05:35,274 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:05:41,983 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:05:42,885 - athena.services.llm_service - ERROR - Failed to generate response: Extra data: line 2 column 1 (char 99)
+2024-06-30 09:05:42,885 - athena.controllers.main_controller - ERROR - Error generating response: Extra data: line 2 column 1 (char 99)
+2024-06-30 09:06:10,129 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\views\chat_window.py", line 131, in upload_document
+    file_path, _ = QFileDialog.getOpenFileName(self, "Upload Document", "", "Documents (*.pdf *.docx)")
+                   ^^^^^^^^^^^
+NameError: name 'QFileDialog' is not defined
+2024-06-30 09:08:49,003 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:08:49,004 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:08:49,016 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:08:49,016 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:08:49,059 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:08:49,061 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:08:51,093 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:08:51,094 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:08:58,828 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 09:09:08,771 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:09:08,771 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:09:10,910 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:09:11,852 - athena.services.llm_service - ERROR - Failed to generate response: Extra data: line 2 column 1 (char 99)
+2024-06-30 09:09:11,852 - athena.controllers.main_controller - ERROR - Error generating response: Extra data: line 2 column 1 (char 99)
+2024-06-30 09:09:26,946 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 09:09:26,950 - athena.controllers.main_controller - ERROR - Error processing document: ChatWindow.set_document_content() missing 1 required positional argument: 'content'
+2024-06-30 09:09:43,175 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:09:43,177 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:09:45,449 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:09:45,976 - athena.services.llm_service - ERROR - Failed to generate response: Extra data: line 2 column 1 (char 98)
+2024-06-30 09:09:45,976 - athena.controllers.main_controller - ERROR - Error generating response: Extra data: line 2 column 1 (char 98)
+2024-06-30 09:14:17,333 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:14:17,333 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:14:17,346 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:14:17,346 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:14:17,388 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:14:17,389 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:14:19,438 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:14:19,439 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:14:22,542 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 09:14:28,623 - athena.controllers.main_controller - INFO - Handling message sent with model: llama2:latest
+2024-06-30 09:14:28,625 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:14:33,524 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:14:33,766 - athena.controllers.main_controller - ERROR - Error generating response: ChatWindow.display_message() missing 1 required positional argument: 'message'
+2024-06-30 09:14:33,767 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\controllers\main_controller.py", line 54, in handle_message_sent
+    self.main_window.chat_window.display_message("Athena: " + response)
+TypeError: ChatWindow.display_message() missing 1 required positional argument: 'message'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\athena\athena\controllers\main_controller.py", line 57, in handle_message_sent
+    self.main_window.chat_window.display_message("Athena: Sorry, I encountered an error while processing your request.")
+TypeError: ChatWindow.display_message() missing 1 required positional argument: 'message'
+2024-06-30 09:17:36,625 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:17:36,625 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:17:36,637 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:17:36,637 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:17:36,686 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:17:36,687 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:17:38,717 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:17:38,717 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:17:42,887 - athena.controllers.main_controller - INFO - Model changed to: llama3:8b-instruct-fp16
+2024-06-30 09:17:47,185 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 09:17:51,407 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\views\chat_window.py", line 106, in send_message
+    model = self.get_selected_model()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'get_selected_model'
+2024-06-30 09:18:10,911 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/David Shum_CFE_Just (1).docx
+2024-06-30 09:18:10,915 - athena.controllers.main_controller - ERROR - Error processing document: 'ChatWindow' object has no attribute 'current_chat_index'
+2024-06-30 09:18:10,915 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\controllers\main_controller.py", line 69, in handle_document_upload
+    self.main_window.chat_window.display_message("System", "Document uploaded and processed successfully.")
+  File "D:\athena\athena\views\chat_window.py", line 99, in display_message
+    if self.current_chat_index == -1:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'current_chat_index'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\athena\athena\controllers\main_controller.py", line 74, in handle_document_upload
+    self.main_window.chat_window.display_message("System", "An error occurred while processing the document.")
+  File "D:\athena\athena\views\chat_window.py", line 99, in display_message
+    if self.current_chat_index == -1:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'current_chat_index'
+2024-06-30 09:20:48,446 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:20:48,446 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:20:48,458 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 49, in <module>
+    main()
+  File "D:\athena\main.py", line 43, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 18, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 24, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 20, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 09:23:45,993 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:23:45,993 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:23:46,006 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:23:46,006 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:23:46,049 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:23:46,050 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:23:48,087 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:23:48,087 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:23:50,235 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 09:23:52,345 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 09:23:58,801 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 09:23:58,801 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:24:03,387 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:24:30,627 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 09:24:48,347 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 09:24:48,348 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:24:50,418 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 09:28:17,581 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 09:28:17,581 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 09:28:17,594 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 09:28:17,594 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 09:28:17,636 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 09:28:17,637 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 09:28:19,688 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 09:28:19,688 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 09:28:22,249 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 09:28:27,716 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 09:28:34,327 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:28:34,327 - athena.controllers.main_controller - ERROR - Error generating response: 'ChatWindow' object has no attribute 'get_current_document'
+2024-06-30 09:28:34,328 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 09:29:06,959 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 09:29:20,874 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:29:20,874 - athena.controllers.main_controller - ERROR - Error generating response: 'ChatWindow' object has no attribute 'get_current_document'
+2024-06-30 09:29:45,530 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 09:29:45,530 - athena.controllers.main_controller - ERROR - Error generating response: 'ChatWindow' object has no attribute 'get_current_document'
+2024-06-30 09:29:59,069 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 09:30:01,426 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 09:30:01,426 - athena.controllers.main_controller - ERROR - Error generating response: 'ChatWindow' object has no attribute 'get_current_document'
+2024-06-30 13:54:38,819 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 13:54:38,819 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 13:54:38,831 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 13:54:38,831 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 13:54:38,874 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 13:54:38,875 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 13:54:40,921 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 13:54:40,922 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 13:54:43,877 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 13:54:50,052 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 13:54:57,385 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 13:54:57,386 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 13:55:02,716 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 13:55:16,708 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Sosa_CFE_Just.docx
+2024-06-30 13:55:27,109 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 13:55:27,110 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 13:55:29,675 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:04:41,034 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:04:41,035 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:04:41,332 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:04:41,332 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 49, in <module>
+    main()
+  File "D:\athena\main.py", line 43, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 27, in __init__
+    self.apply_settings(self.settings)
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainController' object has no attribute 'apply_settings'
+2024-06-30 14:06:21,708 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:06:21,708 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:06:21,817 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 26, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 34, in init_main_window
+    self.apply_settings(self.settings)  # Apply settings after main window is created
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 47, in apply_settings
+    self.llm_service.set_base_url(self.settings["ollama_url"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'LLMService' object has no attribute 'set_base_url'
+2024-06-30 14:08:04,043 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:08:04,043 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:08:04,151 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:08:04,151 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:08:04,228 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:08:04,228 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 14:08:04,271 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 14:08:04,272 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:08:06,333 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 14:08:06,334 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 14:08:13,591 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 14:08:16,670 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 14:08:21,616 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Sosa_CFE_Just.docx
+2024-06-30 14:08:32,053 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:latest
+2024-06-30 14:08:32,054 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:08:36,258 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:09:01,494 - athena.services.llm_service - INFO - LLM service base URL updated to: 
+2024-06-30 14:14:27,269 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:14:27,269 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:14:27,284 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 26, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 32, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 34, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 14:21:06,056 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:21:06,056 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:21:06,069 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 26, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 32, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 14:23:18,719 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:23:18,719 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:23:18,732 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:23:18,732 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:23:18,829 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:23:18,829 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 14:23:18,877 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 14:23:18,878 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:23:20,924 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 14:23:20,925 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 14:23:29,141 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:23:29,142 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:23:31,574 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 14:23:46,297 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 14:23:57,469 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 14:23:57,470 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:24:02,863 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:24:33,473 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:24:33,473 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:24:53,934 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 14:24:53,935 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:24:56,148 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:25:15,341 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 14:25:15,342 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:25:17,567 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:25:54,352 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:25:59,585 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 14:35:43,370 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:35:43,370 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 18, in __init__
+    self.settings = Settings()
+                    ^^^^^^^^^^
+  File "D:\athena\athena\utils\settings.py", line 13, in __init__
+    self.settings = self.load_settings()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\utils\settings.py", line 16, in load_settings
+    settings_path = os.path.join(self.get_working_directory(), self.settings_file)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\utils\settings.py", line 45, in get_working_directory
+    return self.settings.get("working_directory", self.default_workspace)
+           ^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'settings'
+2024-06-30 14:37:38,849 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:37:38,849 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 19, in __init__
+    self.document_service = DocumentService()
+                            ^^^^^^^^^^^^^^^^^
+TypeError: DocumentService.__init__() missing 1 required positional argument: 'working_directory'
+2024-06-30 14:39:16,095 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:39:16,096 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:39:16,109 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:39:16,109 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:39:16,210 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:39:16,210 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 14:39:16,257 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 14:39:16,258 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:39:18,312 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 14:39:18,314 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 14:39:21,156 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 14:39:30,561 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:39:30,561 - athena.controllers.main_controller - WARNING - Working directory does not exist: C:\Users\kevin/Athena_Workspace
+2024-06-30 14:39:33,391 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 14:39:40,024 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Sonia_CFE_Just.docx
+2024-06-30 14:39:40,025 - athena.controllers.main_controller - ERROR - Error processing document: [WinError 3] The system cannot find the path specified
+2024-06-30 14:39:50,612 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 14:39:50,614 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:39:54,580 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:44:10,069 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:44:10,069 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:44:10,081 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 27, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 33, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'
+2024-06-30 14:47:38,327 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:47:38,327 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:47:38,338 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:47:38,431 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:47:38,432 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 31, in __init__
+    self.connect_signals()
+  File "D:\athena\athena\controllers\main_controller.py", line 43, in connect_signals
+    chat_window.new_chat_requested.connect(self.handle_new_chat)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'new_chat_requested'
+2024-06-30 14:49:54,494 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:49:54,494 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:49:54,505 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:49:54,596 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:49:54,596 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 14:49:54,646 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 14:49:54,648 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:49:56,694 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 14:49:56,695 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 14:50:00,216 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 14:50:30,452 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:50:32,742 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 14:50:52,019 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:51:04,344 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 14:51:04,346 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:51:08,334 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:51:20,013 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:51:39,916 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 14:51:39,925 - athena.controllers.main_controller - ERROR - Error processing document: name 'os' is not defined
+2024-06-30 14:53:33,781 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 14:53:33,782 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 14:53:33,794 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:53:33,886 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 14:53:33,886 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 14:53:33,939 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 14:53:33,941 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:53:35,976 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 14:53:35,977 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 14:53:39,917 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 14:53:54,155 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:54:06,211 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 14:55:47,002 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 14:55:51,171 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 14:55:51,172 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 14:55:53,621 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 14:56:21,581 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 14:56:40,307 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:00:03,802 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:00:03,803 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:00:03,815 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:00:03,911 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 15:00:03,911 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 15:00:03,959 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 15:00:03,960 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:00:06,004 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 15:00:06,004 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 15:00:08,205 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 15:00:19,954 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:00:21,162 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 15:00:33,979 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 15:01:05,252 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:latest
+2024-06-30 15:01:05,254 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:01:09,417 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 15:05:04,774 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:05:04,778 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:05:04,790 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:05:04,882 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 15:05:04,882 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 15:05:04,933 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 15:05:04,935 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:05:06,988 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 15:05:06,988 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 15:05:15,257 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 15:05:18,917 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 15:05:32,894 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:05:56,702 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Athena_Workspace/Tripp_CFE_Just.docx
+2024-06-30 15:06:05,592 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 15:06:17,810 - athena.controllers.main_controller - INFO - Model changed to: deepseek-coder:33b
+2024-06-30 15:06:20,805 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 15:10:47,275 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:10:47,275 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:10:47,280 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 48, in init_main_window
+    self.main_window = MainWindow()
+                       ^^^^^^^^^^^^
+  File "D:\athena\athena\views\main_window.py", line 15, in __init__
+    self.chat_window = ChatWindow(self)
+                       ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\chat_window.py", line 32, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\chat_window.py", line 66, in init_ui
+    self.send_button.clicked.connect(self.send_message)
+                                     ^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'send_message'
+2024-06-30 15:15:16,111 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:15:16,111 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:15:16,123 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 49, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 15:17:47,770 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:17:47,771 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:17:47,782 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:17:47,877 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 15:17:47,877 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 15:17:47,929 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 15:17:47,930 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:17:49,976 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 15:17:49,977 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 15:17:53,588 - athena.controllers.main_controller - INFO - Handling pasted content of type: text
+2024-06-30 15:17:53,589 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:17:57,383 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 15:18:09,460 - athena.controllers.main_controller - INFO - Handling pasted content of type: text
+2024-06-30 15:18:09,460 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:18:11,545 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 15:18:28,832 - athena.controllers.main_controller - INFO - Handling pasted content of type: text
+2024-06-30 15:18:28,832 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:18:31,159 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 15:18:59,126 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 15:18:59,127 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 15:18:59,139 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 15:18:59,226 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 15:18:59,226 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 15:18:59,276 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 15:18:59,277 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 15:19:01,321 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 15:19:01,322 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 15:19:03,422 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 15:19:05,148 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 18:11:00,001 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:11:00,004 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:11:00,018 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 54, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 18:12:02,710 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:12:02,711 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:12:02,722 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 57, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 18:12:49,531 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:12:49,532 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:12:49,544 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:12:49,764 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:12:49,764 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 36, in __init__
+    self.connect_signals()
+  File "D:\athena\athena\controllers\main_controller.py", line 68, in connect_signals
+    chat_window.content_pasted.connect(self.handle_pasted_content)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'content_pasted'
+2024-06-30 18:18:01,933 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:18:01,933 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:18:01,946 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:18:02,044 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:18:02,044 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:18:02,094 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:18:02,095 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:18:04,159 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:18:04,160 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:18:26,054 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 18:18:52,660 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:18:52,661 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:18:57,780 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:19:55,825 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\views\main_window.py", line 55, in show_settings_dialog
+    settings_dialog = SettingsDialog(self)
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\settings_dialog.py", line 12, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\settings_dialog.py", line 49, in init_ui
+    self.temperature_input = QDoubleSpinBox(self)
+                             ^^^^^^^^^^^^^^
+NameError: name 'QDoubleSpinBox' is not defined
+2024-06-30 18:25:55,912 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:25:55,913 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:25:55,917 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 53, in init_main_window
+    self.main_window = MainWindow()
+                       ^^^^^^^^^^^^
+  File "D:\athena\athena\views\main_window.py", line 15, in __init__
+    self.chat_window = ChatWindow(self)
+                       ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\chat_window.py", line 52, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\chat_window.py", line 78, in init_ui
+    self.message_input.image_pasted.connect(self.handle_pasted_image)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PasteAwareTextEdit' object has no attribute 'image_pasted'
+2024-06-30 18:27:36,861 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:27:36,861 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:27:36,873 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 54, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'. Did you mean: 'controller'?
+2024-06-30 18:27:59,907 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:27:59,908 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:27:59,920 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:28:00,012 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:28:00,013 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:28:00,066 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:28:00,067 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:28:02,115 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:28:02,115 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:31:01,456 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:31:01,457 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:31:01,461 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 53, in init_main_window
+    self.main_window = MainWindow()
+                       ^^^^^^^^^^^^
+  File "D:\athena\athena\views\main_window.py", line 15, in __init__
+    self.chat_window = ChatWindow(self)
+                       ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\chat_window.py", line 61, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\chat_window.py", line 80, in init_ui
+    self.chat_display.setOpenExternalLinks(True)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QTextEdit' object has no attribute 'setOpenExternalLinks'
+2024-06-30 18:36:19,650 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:36:19,650 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:36:19,662 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:36:19,764 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:36:19,764 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:36:19,814 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:36:19,816 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:36:21,861 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:36:21,862 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:36:31,076 - athena.controllers.main_controller - INFO - Handling message sent with model: llama2:latest
+2024-06-30 18:36:31,076 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:36:34,832 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:36:47,350 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 18:36:50,238 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 18:36:50,238 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:36:54,934 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:37:15,202 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 18:37:17,637 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:37:17,637 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:37:22,212 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:37:33,684 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 18:37:36,716 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:37:36,716 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:37:38,840 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:37:53,323 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:37:53,323 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:37:55,833 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:43:29,829 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:43:29,830 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:43:29,842 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:43:29,936 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:43:29,936 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:43:29,985 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:43:29,986 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:43:32,047 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:43:32,047 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:43:34,063 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 18:43:44,153 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:43:44,153 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:43:46,394 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:44:10,032 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:44:10,033 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:44:12,711 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:48:56,825 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:48:56,826 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:48:56,837 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:48:56,932 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:48:56,932 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:48:56,983 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:48:56,984 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:48:59,036 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:48:59,036 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:49:00,864 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 18:49:20,241 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 18:49:20,279 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:49:24,565 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:52:06,424 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\athena\views\main_window.py", line 55, in show_settings_dialog
+    settings_dialog = SettingsDialog(self)
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\views\settings_dialog.py", line 12, in __init__
+    self.init_ui()
+  File "D:\athena\athena\views\settings_dialog.py", line 49, in init_ui
+    self.temperature_input = QDoubleSpinBox(self)
+                             ^^^^^^^^^^^^^^
+NameError: name 'QDoubleSpinBox' is not defined
+2024-06-30 18:52:50,778 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:52:50,779 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:52:50,791 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:52:50,886 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:52:50,886 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:52:50,941 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:52:50,942 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:52:52,972 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:52:52,972 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:53:08,461 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:53:12,024 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 18:53:14,974 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 18:53:20,855 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:latest
+2024-06-30 18:53:20,858 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:53:24,623 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:53:37,768 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 18:53:44,999 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 18:53:45,002 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:53:47,194 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:54:00,401 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 18:54:05,786 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 18:54:05,787 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:54:07,843 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:57:42,709 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:57:42,714 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:57:42,725 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:57:42,816 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:57:42,817 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:57:42,866 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:57:42,867 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:57:44,921 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:57:44,922 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:57:47,672 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 18:57:51,327 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 18:57:51,329 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:57:53,499 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 18:59:38,380 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 18:59:38,381 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 18:59:38,394 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 18:59:38,485 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 18:59:38,485 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 18:59:38,540 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 18:59:38,541 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:59:40,585 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 18:59:40,586 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 18:59:42,634 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 18:59:46,984 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 18:59:46,985 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 18:59:49,174 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:03:55,720 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 19:03:55,723 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 19:03:55,735 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 35, in __init__
+    self.init_main_window()
+  File "D:\athena\athena\controllers\main_controller.py", line 54, in init_main_window
+    self.main_window.set_controller(self)
+  File "D:\athena\athena\views\main_window.py", line 33, in set_controller
+    self.chat_window.set_controller(controller)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'set_controller'
+2024-06-30 19:04:28,491 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 19:04:28,492 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 19:04:28,504 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:04:28,722 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 19:04:28,722 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "D:\athena\main.py", line 47, in <module>
+    main()
+  File "D:\athena\main.py", line 41, in main
+    controller = MainController()
+                 ^^^^^^^^^^^^^^^^
+  File "D:\athena\athena\controllers\main_controller.py", line 36, in __init__
+    self.connect_signals()
+  File "D:\athena\athena\controllers\main_controller.py", line 62, in connect_signals
+    chat_window.document_uploaded.connect(self.handle_document_upload)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatWindow' object has no attribute 'document_uploaded'
+2024-06-30 19:07:41,155 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 19:07:41,156 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 19:07:41,167 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:07:41,258 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 19:07:41,258 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 19:07:41,313 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 19:07:41,314 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:07:43,407 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 19:07:43,408 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 19:07:45,968 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 19:07:48,042 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:7b
+2024-06-30 19:07:48,042 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:07:51,803 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:10:05,020 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-06-30 19:10:05,021 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-06-30 19:10:05,032 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:10:05,123 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-06-30 19:10:05,123 - athena.controllers.main_controller - INFO - Showing main window
+2024-06-30 19:10:05,173 - athena.controllers.main_controller - INFO - Loading available models
+2024-06-30 19:10:05,175 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:10:07,221 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-06-30 19:10:07,222 - athena.controllers.main_controller - INFO - Model changed to: llama2:latest
+2024-06-30 19:10:11,713 - athena.controllers.main_controller - INFO - Handling message sent with model: llama2:latest
+2024-06-30 19:10:11,713 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:10:15,467 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:13:57,095 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 19:14:08,570 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 19:14:08,571 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:14:13,205 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:20:11,404 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:20:20,902 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 19:20:20,903 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:20:25,178 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:20:39,336 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 19:20:39,337 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:20:42,143 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:21:07,825 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Documents/Eder_senior.pdf
+2024-06-30 19:21:17,219 - athena.controllers.main_controller - INFO - Handling message sent with model: llava:latest
+2024-06-30 19:21:17,220 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:21:19,631 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:21:29,899 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 19:21:34,995 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Documents/Eder_senior.pdf
+2024-06-30 19:21:39,955 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:latest
+2024-06-30 19:21:39,956 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:21:43,990 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:22:11,000 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Documents/Eder_senior.pdf
+2024-06-30 19:22:17,800 - athena.controllers.main_controller - INFO - Handling message sent with model: mistral:latest
+2024-06-30 19:22:17,801 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:22:20,199 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:22:30,745 - athena.controllers.main_controller - INFO - Model changed to: llama3:latest
+2024-06-30 19:22:54,763 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:23:09,437 - athena.controllers.main_controller - INFO - Handling document upload: C:/Users/kevin/Downloads/Tripp_CFE_Just.docx
+2024-06-30 19:23:13,559 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 19:23:13,559 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:23:18,048 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:23:34,740 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 19:23:38,793 - athena.controllers.main_controller - INFO - Handling message sent with model: llama3:latest
+2024-06-30 19:23:38,794 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-06-30 19:23:41,183 - urllib3.connectionpool - DEBUG - http://localhost:11434 "POST /api/generate HTTP/11" 200 None
+2024-06-30 19:23:44,703 - athena.controllers.main_controller - INFO - Starting a new chat
+2024-06-30 19:24:13,441 - athena.controllers.main_controller - INFO - Model changed to: mistral:7b
+2024-06-30 19:24:17,029 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 19:24:18,825 - athena.controllers.main_controller - INFO - Model changed to: llama3:8b-instruct-q6_K
+2024-06-30 19:24:20,958 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 19:24:22,434 - athena.controllers.main_controller - INFO - Model changed to: llama3:8b-instruct-q6_K
+2024-06-30 19:24:23,522 - athena.controllers.main_controller - INFO - Model changed to: llama3:8b-instruct-fp16
+2024-06-30 19:24:25,622 - athena.controllers.main_controller - INFO - Model changed to: mistral:latest
+2024-06-30 19:24:40,411 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:24:44,610 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:24:47,623 - athena.controllers.main_controller - INFO - Model changed to: llava:latest
+2024-06-30 19:24:53,227 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-06-30 19:25:00,543 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-07-01 19:07:23,321 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-07-01 19:07:23,324 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-07-01 19:07:23,337 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-07-01 19:07:23,598 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-07-01 19:07:23,599 - athena.controllers.main_controller - INFO - Showing main window
+2024-07-01 19:07:23,654 - athena.controllers.main_controller - INFO - Loading available models
+2024-07-01 19:07:23,656 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-07-01 19:07:25,706 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-07-01 19:07:25,707 - athena.controllers.main_controller - INFO - Model changed to: deepseek-v2:latest
+2024-07-01 19:08:48,205 - athena.controllers.main_controller - INFO - Initializing MainController
+2024-07-01 19:08:48,206 - athena.controllers.main_controller - DEBUG - Initializing main window
+2024-07-01 19:08:48,217 - athena.services.llm_service - INFO - LLM service base URL updated to: http://localhost:11434
+2024-07-01 19:08:48,308 - athena.controllers.main_controller - DEBUG - Connecting signals
+2024-07-01 19:08:48,308 - athena.controllers.main_controller - INFO - Showing main window
+2024-07-01 19:08:48,363 - athena.controllers.main_controller - INFO - Loading available models
+2024-07-01 19:08:48,364 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-07-01 19:08:50,409 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/11" 200 None
+2024-07-01 19:08:50,410 - athena.controllers.main_controller - INFO - Model changed to: deepseek-v2:latest

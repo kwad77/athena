@@ -1,0 +1,25 @@
+# GUI
+PyQt6
+qt-material
+
+# Networking
+requests
+chardet
+charset-normalizer
+urllib3
+idna
+
+# Document Processing
+PyPDF2
+python-docx
+
+# Utility
+python-dotenv
+
+# Development Tools
+pylint
+black
+isort
+
+# Testing
+pytest

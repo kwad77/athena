@@ -1,0 +1,29 @@
+# test_imports.py
+import sys
+import os
+
+print("Python version:", sys.version)
+print("Python executable:", sys.executable)
+print("Python path:", sys.path)
+
+print("\nCurrent working directory:", os.getcwd())
+
+print("\nTrying to import PyQt6...")
+try:
+    from PyQt6.QtWidgets import QApplication
+    print("PyQt6 imported successfully")
+except ImportError as e:
+    print(f"Failed to import PyQt6: {e}")
+    print("Installed packages:")
+    os.system(f'"{sys.executable}" -m pip list')
+
+print("\nTrying to import other required packages...")
+try:
+    import requests
+    import PyPDF2
+    import docx
+    print("All other packages imported successfully")
+except ImportError as e:
+    print(f"Failed to import a package: {e}")
+
+print("\nAll imports attempted!")
